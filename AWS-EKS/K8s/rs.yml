@@ -1,0 +1,21 @@
+apiVersion: apps/v1 
+kind: ReplicaSet 
+metadata:
+  name: myfirstpod-rs
+  labels:
+    app: aws-ecr
+spec:
+  template:
+    metadata:
+      name: myfirstpod
+      labels:
+        app: aws-ecr
+    spec:
+      containers:
+        - name: myfirstpod-container
+          image: public.ecr.aws/djfldsja/flask
+
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: aws-ecr

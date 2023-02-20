@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myfirstpod
+  labels:
+    app: aws-ecr
+spec:
+  containers:
+    - name: myflaskapp
+      image: public.ecr.aws/bldsjr3/flaskapp
