@@ -3,3 +3,6 @@
 
 # Creating a Minikube cluster on windows
 `minikube start --driver=hyperv`
+
+# To check the minikube version
+`minikube version --output json`
